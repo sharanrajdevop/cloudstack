@@ -1,0 +1,2 @@
+[demo]
+demoserver ansible_host=172.31.22.217 ansible_user=ubuntu ansible_ssh_private_key_file=/etc/ansible/cloudstack.pem

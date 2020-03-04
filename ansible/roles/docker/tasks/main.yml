@@ -1,0 +1,12 @@
+- name: Update Cache
+  apt: update_cache=yes
+  
+- name: Install Docker Engine
+  apt: name=docker.io state='{{dockerst}}'
+  
+- name: Start Docker Service
+  service: name=docker state=started
+  
+- name: Allow User To Run Docker
+  user: name='{{demouser}}' group=docker
+  
