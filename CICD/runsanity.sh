@@ -10,7 +10,7 @@ launch_container()
   BUILDDIR=$(pwd)
   mkdir sanity
 
-  CID=$(/usr/bin/docker run -itd --name testc -p 8080:8080 -v ${BUILDDIR}/sanity:/opt/jboss/wildfly/standalone/log ${IMG})
+  CID=$(/usr/bin/docker run -itd --name cloudstack -p 8080:8080 -v ${BUILDDIR}/sanity:/opt/jboss/wildfly/standalone/log ${IMG})
 
   if [ $? -ne "0" ]; then
      echo "ERROR: Couldnt create Docker Container"
